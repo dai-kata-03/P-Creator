@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cajp.mont.siad.p_creator.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/background" />
+
+    <TextView
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:text="SIMPLE Password Creator"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/numberView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/headerView"
+        android:text="Please set a length of Password (between 4 - 20)"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal"/>
+
+    <EditText
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/password_length"
+        android:layout_below="@+id/numberView"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:id="@+id/password_creation"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Press here to Create Password!"
+        android:layout_below="@+id/password_length"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+    android:id="@+id/password_text1"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:text="1. Alphabets & Numbers"
+    android:textSize="15sp"
+    android:textStyle="bold|italic"
+    android:gravity="center_horizontal"
+    android:layout_centerVertical="true"
+    android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/password_result1"
+        android:layout_below="@+id/password_text1"
+        android:layout_alignStart="@+id/password_creation" />
+
+    <Button
+        android:id="@+id/password_copy1"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:text="copy"
+        android:layout_below="@+id/password_text1"
+        android:layout_toEndOf="@+id/password_result1" />
+
+    <TextView
+        android:id="@+id/password_text2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="2. Alphabets, Numbers & Symbols"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/password_copy2"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/password_result2"
+        android:layout_alignBottom="@+id/password_copy2"
+        android:layout_toStartOf="@+id/password_copy1" />
+
+    <Button
+        android:id="@+id/password_copy2"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:text="copy"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/password_result2"
+        android:layout_marginBottom="54dp" />
+
+</RelativeLayout>
